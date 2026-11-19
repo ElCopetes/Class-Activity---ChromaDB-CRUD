@@ -1,23 +1,25 @@
 import chromadb
 import json
 from sentence_transformers import SentenceTransformer
-
-
+ 
+ 
 # --------------------------------------------------
 # Configuración
 # --------------------------------------------------
-
+ 
 NOMBRE_COLECCION = "the_oswaldos"
-
+ 
 # Modelo de embeddings multilingüe; los vectores se generan manualmente
 modelo = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
-
+ 
 cliente = chromadb.PersistentClient(path="./chroma_data")
-
+ 
 coleccion = cliente.get_or_create_collection(
     name=NOMBRE_COLECCION,
     metadata={"hnsw:space": "cosine"}
 )
+ 
+ 
 
 
 # --------------------------------------------------
@@ -46,6 +48,11 @@ def insertar_documentos(documentos, metadatos):
 
     # TODO: Insertar los documentos, IDs y metadatos
     # utilizando el método add().
+    col.add (ids = ids
+    documents = documentos
+    metadata = metadatos
+    )
+    
 
     print("\n¡Documentos insertados correctamente!")
 
@@ -60,26 +67,32 @@ def buscar_documentos():
 
     # TODO: Utilizar query() para recuperar los 4 documentos
     # más similares a la consulta.
+    res = col.query(
+        query_texts = [consulta],
+        n_results = 4
+    )
 
     # TODO: Mostrar los documentos y sus metadatos.
-
+    print(res)
 
 # --------------------------------------------------
 # Actualizar un documento
 # --------------------------------------------------
 
-def actualizar_documento():
+def buscar_documentos():
 
-    id_documento = input("\nIngresa el ID del documento que deseas actualizar: ")
+    consulta = input("\nIngresa tu consulta: ")
 
-    nuevo_documento = input("Ingresa el nuevo contenido: ")
+    vector = modelo.encode([consulta]).tolist()
 
-    # TODO: Actualizar el documento utilizando update().
-    # Puedes modificar su contenido, metadatos o ambos.
+    res = col.query(
+        query_embeddings=vector,
+        n_results=4
+    )
 
-    # TODO: Comprobar la actualización utilizando get().
-
-    print("\n¡Documento actualizado!")
+    for doc, meta in zip(res["documents"][0], res["metadatas"][0]):
+        print("\n", doc)
+        print(meta)
 
 
 # --------------------------------------------------
