@@ -1,20 +1,22 @@
-
 import chromadb
 import json
+from sentence_transformers import SentenceTransformer
 
 
 # --------------------------------------------------
 # Configuración
 # --------------------------------------------------
 
-NOMBRE_COLECCION = "tu_nombre_collection"
+NOMBRE_COLECCION = "the_oswaldos"
 
-# TODO: Configurar el modelo de embeddings que sea conveniente.
+# Modelo de embeddings multilingüe; los vectores se generan manualmente
+modelo = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
 cliente = chromadb.PersistentClient(path="./chroma_data")
 
 coleccion = cliente.get_or_create_collection(
-    name=NOMBRE_COLECCION
+    name=NOMBRE_COLECCION,
+    metadata={"hnsw:space": "cosine"}
 )
 
 
