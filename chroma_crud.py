@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 # Configuración
 # --------------------------------------------------
  
-NOMBRE_COLECCION = "the_oswaldos"
+NOMBRE_COLECCION = "the_oswaldos_collection"
  
 # Modelo de embeddings multilingüe; los vectores se generan manualmente
 modelo = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
@@ -46,11 +46,15 @@ def insertar_documentos(documentos, metadatos):
     # Generar un ID para cada documento
     ids = [f"doc_{i}" for i in range(len(documentos))]
 
-    # TODO: Insertar los documentos, IDs y metadatos
+    # Insertar los documentos, IDs y metadatos
     # utilizando el método add().
-    coleccion.add (ids = ids,
-    documents = documentos,
-    metadatas = metadatos
+    embeddings = modelo.encode(documentos).tolist()
+
+    coleccion.add(
+        ids=ids,
+        documents=documentos,
+        metadatas=metadatos,
+        embeddings=embeddings
     )
     
 
@@ -65,23 +69,25 @@ def buscar_documentos():
 
     consulta = input("\nIngresa tu consulta: ")
 
-    # TODO: Utilizar query() para recuperar los 4 documentos
+    # Utilizar query() para recuperar los 4 documentos
     # más similares a la consulta.
     res = coleccion.query(
-        query_texts = [consulta],
-        n_results = 4
-    )
+    query_embeddings=modelo.encode([consulta]).tolist(), n_results=4 )
 
-    # TODO: Mostrar los documentos y sus metadatos.
-    print(res)
+    # Mostrar los documentos y sus metadatos.
+    print(f"\nTop 4 resultados para: '{consulta}'\n")
+    for i in range(len(res["ids"][0])):
+        print(f"{i+1}. [{res['ids'][0][i]}] distancia: {res['distances'][0][i]:.4f}")
+        print(f"   {res['documents'][0][i]}")
+        print(f"   Metadatos: {res['metadatas'][0][i]}\n")
 
 # --------------------------------------------------
 # Actualizar un documento
 # --------------------------------------------------
 
-def actualizar_documentos():
+def actualizar_documento():
 
-    consulta = input("\nIngresa tu consulta: ")
+    id_documento = input("\nIngresa el ID del documento que deseas actualizar: ")
 
     # Veo que exista el documento antes de actualizarlo
     anterior = coleccion.get(ids=[id_documento])
