@@ -109,19 +109,34 @@ def actualizar_documento():
 
 def eliminar_subset():
 
-    campo = input("\nIngresa el campo del metadato: ")
-    valor = input("Ingresa el valor que deseas buscar: ")
+    campo = input("\nIngresa el campo del metadato: ").strip()
+    valor = input("Ingresa el valor que deseas buscar: ").strip()
 
-    # TODO: Crear un filtro where utilizando el campo y el valor.
-    # Ejemplo: {"category": "programming"}
+    # Crear el filtro where con el campo y valor indicados
+    filtro = {campo: valor}
 
-    # TODO: Eliminar los documentos que cumplan la condición
-    # utilizando delete().
+    # Consultar los documentos que cumplen la condición ANTES de eliminar
+    coincidencias = coleccion.get(where=filtro)
+    total = len(coincidencias["ids"])
 
-    # TODO: Comprobar que los documentos fueron eliminados
-    # utilizando get().
+    if total == 0:
+        print(f"\nNo hay documentos con {campo} = '{valor}'.")
+        return
 
-    print("\n¡Documentos eliminados correctamente!")
+    print(f"\nSe encontraron {total} documentos con {campo} = '{valor}':")
+    for id_doc, doc in zip(coincidencias["ids"], coincidencias["documents"]):
+        print(f"  {id_doc}: {doc[:60]}...")
+
+    # Eliminar los documentos que cumplen la condición
+    coleccion.delete(where=filtro)
+
+    # Comprobar que ya no quedan documentos con esa condición
+    restantes = coleccion.get(where=filtro)
+    if not restantes["ids"]:
+        print(f"\nSe eliminaron {total} documentos. Quedan {coleccion.count()} en la colección.")
+        print("\n¡Documentos eliminados correctamente!")
+    else:
+        print("\nError: algunos documentos no se eliminaron.")
 
 
 # --------------------------------------------------
@@ -136,13 +151,27 @@ def eliminar_todos():
 
     if confirmacion.lower() == "si":
 
-        # TODO: Obtener los IDs de todos los documentos utilizando get().
+        # Checo que haya documentos antes de intentar eliminar
+        total = coleccion.count()
+        
+        if total == 0:
+            print("\nNo hay documentos para eliminar.")
+            return
 
-        # TODO: Eliminar todos los documentos utilizando delete().
+        #Si hay documentos, los obtengo para eliminar
+        todos = coleccion.get()
+        
+        # Eliminar todos los documentos utilizando delete().
+        if todos["ids"]:
+            coleccion.delete(ids=todos["ids"])
 
-        # TODO: Comprobar que la colección esté vacía.
-
-        print("\n¡Todos los documentos fueron eliminados!")
+        # Comprobar que la colección esté vacía.
+        if coleccion.count() == 0:
+            print("Se eliminaron", total, "documentos. Restantes:", coleccion.count())
+            print("\n¡Todos los documentos fueron eliminados!")
+        #En caso de error
+        else:
+            print("\nError: No se pudieron eliminar todos los documentos.")
 
     else:
         print("\nOperación cancelada.")
