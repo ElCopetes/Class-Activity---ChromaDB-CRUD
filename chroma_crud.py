@@ -72,12 +72,33 @@ def actualizar_documento():
 
     id_documento = input("\nIngresa el ID del documento que deseas actualizar: ")
 
-    nuevo_documento = input("Ingresa el nuevo contenido: ")
+    # Veo que exista el documento antes de actualizarlo
+    anterior = coleccion.get(ids=[id_documento])
 
-    # TODO: Actualizar el documento utilizando update().
-    # Puedes modificar su contenido, metadatos o ambos.
+    # Si la lista de ids viene vacía, el documento no existe
+    if not anterior["ids"]:
+        print(f"\nNo existe ningún documento con el ID '{id_documento}'.")
+        return
 
-    # TODO: Comprobar la actualización utilizando get().
+    print("\nTexto anterior:", anterior["documents"][0])
+    print("Metadatos:", anterior["metadatas"][0])
+
+    nuevo_documento = input("\nIngresa el nuevo contenido: ")
+
+    # Convertir el nuevo texto en vector con el mismo modelo de la colección
+    embeddings = modelo.encode([nuevo_documento]).tolist()
+
+    # Actualizar el contenido del documento y su vector
+    coleccion.update(
+        ids=[id_documento],
+        documents=[nuevo_documento],
+        embeddings=embeddings
+    )
+
+    # Muestro el cambio realizado, para comprobar que se actualizó correctamente
+    registro = coleccion.get(ids=[id_documento])
+    print("\nNuevo texto:", registro["documents"][0])
+    print("Metadatos:", registro["metadatas"][0])
 
     print("\n¡Documento actualizado!")
 
