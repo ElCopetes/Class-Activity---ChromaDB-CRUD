@@ -1,0 +1,246 @@
+[
+    {
+        "document": "Un procesador de 6 núcleos y 12 hilos ofrece un buen equilibrio para jugar y realizar tareas diarias sin generar cuellos de botella en la mayoría de los títulos actuales.",
+        "metadata": {"tipo": "hardware", "categoria": "cpu", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Los procesadores con caché 3D apilada incorporan una gran cantidad de memoria caché L3, lo que mejora notablemente los cuadros por segundo en juegos sensibles a la latencia.",
+        "metadata": {"tipo": "hardware", "categoria": "cpu", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "Un procesador de 16 núcleos es ideal para renderizado 3D, compilación de código y edición de video, tareas en las que el trabajo se reparte entre muchos hilos al mismo tiempo.",
+        "metadata": {"tipo": "hardware", "categoria": "cpu", "gama": "alta", "uso": "creacion_contenido"}
+    },
+    {
+        "document": "Una CPU de 4 núcleos con gráficos integrados permite armar una computadora de oficina económica sin necesidad de comprar una tarjeta de video dedicada.",
+        "metadata": {"tipo": "hardware", "categoria": "cpu", "gama": "entrada", "uso": "oficina"}
+    },
+    {
+        "document": "Los procesadores con el multiplicador desbloqueado permiten hacer overclock para subir su frecuencia, siempre que la placa madre y la refrigeración lo soporten.",
+        "metadata": {"tipo": "hardware", "categoria": "cpu", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "La arquitectura híbrida combina núcleos de rendimiento y núcleos de eficiencia: las tareas pesadas se asignan a los primeros y los procesos en segundo plano a los segundos para ahorrar energía.",
+        "metadata": {"tipo": "hardware", "categoria": "cpu", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "Un procesador de bajo consumo, con un TDP cercano a 65 W, genera poco calor y puede enfriarse con el disipador incluido, lo que lo hace perfecto para equipos compactos y silenciosos.",
+        "metadata": {"tipo": "hardware", "categoria": "cpu", "gama": "entrada", "uso": "general"}
+    },
+    {
+        "document": "Contar con 16 GB de memoria RAM en doble canal es el mínimo recomendado hoy para jugar; dos módulos de 8 GB rinden mejor que un solo módulo de 16 GB.",
+        "metadata": {"tipo": "hardware", "categoria": "ram", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Un kit de 32 GB de DDR5 resulta muy útil para editar video en 4K, ejecutar máquinas virtuales y mantener abiertas decenas de pestañas del navegador sin que el sistema se vuelva lento.",
+        "metadata": {"tipo": "hardware", "categoria": "ram", "gama": "alta", "uso": "creacion_contenido"}
+    },
+    {
+        "document": "La velocidad de la memoria depende de su frecuencia en MT/s y de su latencia CAS; un kit de 6000 MT/s con CL30 se considera el punto óptimo para las plataformas AMD recientes.",
+        "metadata": {"tipo": "hardware", "categoria": "ram", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "Los perfiles XMP y EXPO deben activarse en la BIOS; si no se habilitan, la memoria trabaja a una velocidad base mucho más baja que la anunciada en la caja.",
+        "metadata": {"tipo": "hardware", "categoria": "ram", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "Con 8 GB de RAM alcanza para navegar por internet, usar ofimática y hacer videollamadas, aunque se queda corto al abrir muchos programas a la vez.",
+        "metadata": {"tipo": "hardware", "categoria": "ram", "gama": "entrada", "uso": "oficina"}
+    },
+    {
+        "document": "La memoria ECC detecta y corrige errores en los bits almacenados, por lo que se utiliza en servidores y estaciones de trabajo donde la estabilidad es crítica.",
+        "metadata": {"tipo": "hardware", "categoria": "ram", "gama": "alta", "uso": "general"}
+    },
+    {
+        "document": "Una tarjeta gráfica de gama media con 8 GB de VRAM permite jugar en resolución 1080p con calidad alta y una tasa de cuadros elevada.",
+        "metadata": {"tipo": "hardware", "categoria": "gpu", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Las tarjetas gráficas de gama alta con 16 GB de VRAM o más están pensadas para jugar en 4K con todos los efectos visuales activados.",
+        "metadata": {"tipo": "hardware", "categoria": "gpu", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "El trazado de rayos simula cómo rebota la luz en una escena para producir reflejos y sombras realistas, pero tiene un costo muy alto en rendimiento.",
+        "metadata": {"tipo": "hardware", "categoria": "gpu", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "Las tecnologías de escalado con inteligencia artificial, como DLSS, FSR y XeSS, renderizan el juego a menor resolución y reconstruyen la imagen para aumentar los cuadros por segundo.",
+        "metadata": {"tipo": "hardware", "categoria": "gpu", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Las GPU de NVIDIA, gracias a CUDA y sus núcleos tensor, aceleran el entrenamiento de redes neuronales y el renderizado en programas como Blender.",
+        "metadata": {"tipo": "hardware", "categoria": "gpu", "gama": "alta", "uso": "creacion_contenido"}
+    },
+    {
+        "document": "Una gráfica de entrada con bajo consumo, que no requiere conector de alimentación adicional, es suficiente para juegos competitivos ligeros como Valorant o League of Legends.",
+        "metadata": {"tipo": "hardware", "categoria": "gpu", "gama": "entrada", "uso": "gaming"}
+    },
+    {
+        "document": "Los codificadores de video por hardware integrados en la tarjeta gráfica permiten transmitir en vivo y grabar partidas sin cargar al procesador.",
+        "metadata": {"tipo": "hardware", "categoria": "gpu", "gama": "media", "uso": "creacion_contenido"}
+    },
+    {
+        "document": "Un SSD NVMe PCIe 4.0 alcanza lecturas de alrededor de 7000 MB/s, de modo que el sistema arranca y los juegos cargan en apenas unos segundos.",
+        "metadata": {"tipo": "hardware", "categoria": "almacenamiento", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "Un SSD SATA es más lento que uno NVMe, pero mucho más rápido que un disco duro, por lo que es una excelente mejora para revivir una computadora vieja.",
+        "metadata": {"tipo": "hardware", "categoria": "almacenamiento", "gama": "entrada", "uso": "oficina"}
+    },
+    {
+        "document": "El disco duro mecánico ofrece mucha capacidad por poco dinero y sirve para guardar respaldos, fotos y películas, aunque es lento y sensible a los golpes.",
+        "metadata": {"tipo": "hardware", "categoria": "almacenamiento", "gama": "entrada", "uso": "general"}
+    },
+    {
+        "document": "Un SSD con caché DRAM mantiene una velocidad estable durante transferencias largas, mientras que uno sin DRAM puede perder rendimiento al copiar archivos de video muy grandes.",
+        "metadata": {"tipo": "hardware", "categoria": "almacenamiento", "gama": "media", "uso": "creacion_contenido"}
+    },
+    {
+        "document": "Una unidad de 2 TB es recomendable para quien instala muchos juegos modernos, ya que varios de ellos ocupan más de 100 GB cada uno.",
+        "metadata": {"tipo": "hardware", "categoria": "almacenamiento", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "El socket de la placa madre, como AM5 o LGA1700, determina qué procesadores son compatibles, así que conviene revisarlo antes de comprar cualquier pieza.",
+        "metadata": {"tipo": "hardware", "categoria": "placa_madre", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "Las placas madre con chipset de gama alta ofrecen más líneas PCIe, más ranuras M.2 y fases de alimentación robustas para hacer overclock con estabilidad.",
+        "metadata": {"tipo": "hardware", "categoria": "placa_madre", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "El formato Mini-ITX permite construir equipos muy compactos, aunque estas placas solo tienen una ranura PCIe y dos ranuras de memoria.",
+        "metadata": {"tipo": "hardware", "categoria": "placa_madre", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "Una placa madre con wifi y Bluetooth integrados evita tener que comprar tarjetas o adaptadores de red adicionales.",
+        "metadata": {"tipo": "hardware", "categoria": "placa_madre", "gama": "entrada", "uso": "general"}
+    },
+    {
+        "document": "Una fuente de poder con certificación 80 Plus Gold convierte la energía con alta eficiencia, lo que se traduce en menos calor y un menor consumo eléctrico.",
+        "metadata": {"tipo": "hardware", "categoria": "fuente", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "Las fuentes modulares permiten conectar únicamente los cables necesarios, mejorando el flujo de aire y la organización dentro del gabinete.",
+        "metadata": {"tipo": "hardware", "categoria": "fuente", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "Una fuente de 850 W compatible con ATX 3.0 incluye el conector 12V-2x6 y soporta los picos de energía de las tarjetas gráficas de alto consumo.",
+        "metadata": {"tipo": "hardware", "categoria": "fuente", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "La refrigeración líquida AIO de 360 mm mantiene bajas las temperaturas de procesadores de alto consumo incluso bajo cargas intensas y prolongadas.",
+        "metadata": {"tipo": "hardware", "categoria": "refrigeracion", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "Un disipador de torre por aire es económico, confiable y no tiene riesgo de fugas, y su desempeño es comparable al de muchos sistemas líquidos de 240 mm.",
+        "metadata": {"tipo": "hardware", "categoria": "refrigeracion", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "La pasta térmica rellena las imperfecciones microscópicas entre el procesador y el disipador; reemplazarla cada pocos años ayuda a evitar el sobrecalentamiento.",
+        "metadata": {"tipo": "hardware", "categoria": "refrigeracion", "gama": "entrada", "uso": "general"}
+    },
+    {
+        "document": "Un ratón ultraligero, de menos de 60 gramos, facilita los movimientos rápidos y precisos en shooters competitivos.",
+        "metadata": {"tipo": "periferico", "categoria": "raton", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "Un sensor óptico de alta precisión sin aceleración hace que el cursor se desplace de forma exactamente proporcional al movimiento de la mano.",
+        "metadata": {"tipo": "periferico", "categoria": "raton", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "El ratón vertical ergonómico coloca la mano en una postura natural, como al dar un apretón de manos, y reduce la tensión en la muñeca durante jornadas largas.",
+        "metadata": {"tipo": "periferico", "categoria": "raton", "gama": "media", "uso": "oficina"}
+    },
+    {
+        "document": "Un ratón inalámbrico con receptor de 2.4 GHz y Bluetooth puede alternar entre varios dispositivos y su batería dura varios meses.",
+        "metadata": {"tipo": "periferico", "categoria": "raton", "gama": "media", "uso": "oficina"}
+    },
+    {
+        "document": "Los ratones para juegos MMO tienen doce botones laterales programables para asignar habilidades y macros sin soltar el teclado.",
+        "metadata": {"tipo": "periferico", "categoria": "raton", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Un ratón básico con cable funciona al conectarlo, sin instalar controladores, y es suficiente para el trabajo de oficina cotidiano.",
+        "metadata": {"tipo": "periferico", "categoria": "raton", "gama": "entrada", "uso": "oficina"}
+    },
+    {
+        "document": "Los teclados mecánicos con interruptores lineales se presionan de forma suave y sin clic, por lo que son muy populares entre los jugadores.",
+        "metadata": {"tipo": "periferico", "categoria": "teclado", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Los interruptores táctiles y clicky producen un sonido característico y una respuesta física clara, agradable para escribir pero molesta en oficinas compartidas.",
+        "metadata": {"tipo": "periferico", "categoria": "teclado", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "Los teclados compactos de formato TKL o 65% eliminan el teclado numérico y dejan más espacio en el escritorio para mover el ratón.",
+        "metadata": {"tipo": "periferico", "categoria": "teclado", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Los teclados magnéticos de efecto Hall permiten ajustar el punto de activación de cada tecla y ofrecen la función de reactivación rápida.",
+        "metadata": {"tipo": "periferico", "categoria": "teclado", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "Un teclado de membrana es silencioso y económico, una opción práctica para escribir documentos en la oficina o en casa.",
+        "metadata": {"tipo": "periferico", "categoria": "teclado", "gama": "entrada", "uso": "oficina"}
+    },
+    {
+        "document": "Un teclado hot-swap permite cambiar los interruptores sin soldar, lo que facilita personalizar el tacto y el sonido de cada tecla.",
+        "metadata": {"tipo": "periferico", "categoria": "teclado", "gama": "alta", "uso": "general"}
+    },
+    {
+        "document": "Los audífonos para juegos con sonido envolvente 7.1 virtual ayudan a ubicar de dónde provienen los pasos y los disparos de los enemigos.",
+        "metadata": {"tipo": "periferico", "categoria": "audifonos", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "La cancelación activa de ruido bloquea el sonido ambiental y permite concentrarse en oficinas abiertas o durante viajes en transporte público.",
+        "metadata": {"tipo": "periferico", "categoria": "audifonos", "gama": "alta", "uso": "oficina"}
+    },
+    {
+        "document": "Los audífonos de estudio abiertos tienen una respuesta de frecuencia plana, ideal para mezclar música y editar audio con fidelidad.",
+        "metadata": {"tipo": "periferico", "categoria": "audifonos", "gama": "alta", "uso": "creacion_contenido"}
+    },
+    {
+        "document": "Una diadema inalámbrica con micrófono de supresión de ruido es muy útil para videollamadas y reuniones de trabajo.",
+        "metadata": {"tipo": "periferico", "categoria": "audifonos", "gama": "media", "uso": "oficina"}
+    },
+    {
+        "document": "Los audífonos intraurales con cable ofrecen una calidad de sonido sorprendente por su precio y son fáciles de llevar a cualquier lugar.",
+        "metadata": {"tipo": "periferico", "categoria": "audifonos", "gama": "entrada", "uso": "general"}
+    },
+    {
+        "document": "Los audífonos inalámbricos con conexión de 2.4 GHz tienen una latencia muy baja, mientras que por Bluetooth el retraso del audio se nota al jugar.",
+        "metadata": {"tipo": "periferico", "categoria": "audifonos", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Un monitor 1080p de 144 Hz muestra el movimiento con mucha más fluidez que uno de 60 Hz y es el punto de partida recomendado para jugar.",
+        "metadata": {"tipo": "periferico", "categoria": "monitor", "gama": "entrada", "uso": "gaming"}
+    },
+    {
+        "document": "Un monitor IPS de 1440p y 165 Hz ofrece un excelente equilibrio entre nitidez de imagen y fluidez para videojuegos.",
+        "metadata": {"tipo": "periferico", "categoria": "monitor", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Los monitores OLED muestran negros puros, contraste infinito y un tiempo de respuesta casi instantáneo, aunque pueden sufrir quemado de imagen con elementos estáticos.",
+        "metadata": {"tipo": "periferico", "categoria": "monitor", "gama": "alta", "uso": "gaming"}
+    },
+    {
+        "document": "Un monitor 4K con amplia cobertura de color y calibración de fábrica es fundamental para el trabajo profesional de fotografía y edición de video.",
+        "metadata": {"tipo": "periferico", "categoria": "monitor", "gama": "alta", "uso": "creacion_contenido"}
+    },
+    {
+        "document": "Los paneles VA destacan por su alto contraste, los IPS por sus colores y ángulos de visión, y los TN por ser rápidos y baratos.",
+        "metadata": {"tipo": "periferico", "categoria": "monitor", "gama": "media", "uso": "general"}
+    },
+    {
+        "document": "Un monitor ultrapanorámico curvo con relación 21:9 amplía el campo de visión en simuladores y da más espacio para trabajar con varias ventanas.",
+        "metadata": {"tipo": "periferico", "categoria": "monitor", "gama": "alta", "uso": "general"}
+    },
+    {
+        "document": "G-Sync y FreeSync sincronizan la frecuencia de refresco del monitor con los cuadros que genera la tarjeta gráfica, eliminando el desgarro de la imagen.",
+        "metadata": {"tipo": "periferico", "categoria": "monitor", "gama": "media", "uso": "gaming"}
+    },
+    {
+        "document": "Un monitor de 24 pulgadas en 1080p con base ajustable en altura y filtro de luz azul es cómodo para largas jornadas frente a hojas de cálculo.",
+        "metadata": {"tipo": "periferico", "categoria": "monitor", "gama": "entrada", "uso": "oficina"}
+    }
+]
