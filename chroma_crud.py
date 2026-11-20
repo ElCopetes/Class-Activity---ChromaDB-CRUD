@@ -102,20 +102,31 @@ def actualizar_documento():
 
     nuevo_documento = input("\nIngresa el nuevo contenido: ")
 
+    # Preguntar si también se quiere cambiar un metadato
+    campo = input("\nCampo del metadato a cambiar (Enter para no cambiar): ").strip()
+
+    # Copiar los metadatos actuales del documento
+    nuevos_metadatos = dict(anterior["metadatas"][0])
+
+    if campo:
+        valor = input(f"Nuevo valor para '{campo}': ").strip()
+        nuevos_metadatos[campo] = valor
+
     # Convertir el nuevo texto en vector con el mismo modelo de la colección
     embeddings = modelo.encode([nuevo_documento]).tolist()
 
-    # Actualizar el contenido del documento y su vector
+    # Actualizar contenido, vector y metadatos del documento.
     coleccion.update(
         ids=[id_documento],
         documents=[nuevo_documento],
-        embeddings=embeddings
+        embeddings=embeddings,
+        metadatas=[nuevos_metadatos]
     )
 
     # Muestro el cambio realizado, para comprobar que se actualizó correctamente
     registro = coleccion.get(ids=[id_documento])
     print("\nNuevo texto:", registro["documents"][0])
-    print("Metadatos:", registro["metadatas"][0])
+    print("Nuevos Metadatos:", registro["metadatas"][0])
 
     print("\n¡Documento actualizado!")
 
